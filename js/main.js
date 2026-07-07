@@ -20,6 +20,19 @@
   var now = new Date().getFullYear();
   y.forEach(function (el) { el.textContent = now; });
 
+  /* Révélation au scroll */
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && reveals.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
   /* Tri du tableau comparatif au clic d'en-tête (data-sort) */
   document.querySelectorAll("table.compare th[data-sort]").forEach(function (th) {
     th.style.cursor = "pointer";
