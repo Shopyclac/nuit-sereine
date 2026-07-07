@@ -1,7 +1,7 @@
-# Nuit Sereine — site d'affiliation literie
+# Lunéa Literie — site d'affiliation literie
 
 Site statique (HTML / CSS / JS, sans dépendance ni build) prêt à héberger.
-Marque de démonstration : **Nuit Sereine**, comparateur literie indépendant.
+Marque de démonstration : **Lunéa Literie**, comparateur literie indépendant.
 
 ## Structure
 
@@ -57,7 +57,7 @@ python -m http.server 8000
 > Le site étant 100 % statique, l'hébergement coûte de 0 à quelques euros par mois et la vitesse est excellente (atout SEO).
 
 ### Avant de publier (checklist)
-- [ ] Remplacer le domaine `www.nuit-sereine.fr` dans : balises `canonical`, `og:`, `sitemap.xml`, `robots.txt`.
+- [ ] Remplacer le domaine `www.lunea-literie.fr` dans : balises `canonical`, `og:`, `sitemap.xml`, `robots.txt`.
 - [ ] Compléter `mentions-legales.html` et `politique-confidentialite.html` (champs entre crochets).
 - [ ] Remplacer les liens `href="#"` des boutons "Voir le prix" par les vrais liens affiliés.
 - [ ] Ajouter un bandeau de consentement cookies (ex. tarteaucitron.js, gratuit et FR).
@@ -104,3 +104,36 @@ Inscription via leurs régies : souvent **Awin**, **Effiliation/Kwanko** ou **Ti
 - Newsletter sommeil pour capter l'email et relancer.
 - Pages longue traîne supplémentaires (matelas 160x200, matelas bébé, surmatelas, etc.).
 - Passage possible sous WordPress + Flatsome si tu veux gérer le contenu sans toucher au code.
+
+---
+
+## Crédits images (photos libres de droit)
+
+Photos issues de **Pexels** (licence gratuite, usage commercial autorisé, sans attribution obligatoire).
+Elles sont pour l'instant **chargées via le CDN Pexels** (hotlink). Avant la mise en ligne définitive,
+les télécharger et les héberger en local (format **WebP**) pour la vitesse et la fiabilité.
+
+| Emplacement | ID Pexels |
+|---|---|
+| Accueil — carte Matelas | 5998043 |
+| Accueil — carte Oreillers | 5858234 |
+| Accueil — carte Sommiers | 9819647 |
+| Page Matelas — bannière | 15667603 |
+| Page Oreillers — bannière | 5629134 |
+| Page Sommiers — bannière | 15131055 |
+| Article « Meilleurs matelas 2026 » | 8251914 |
+| Article « Matelas et mal de dos » | 371109 |
+
+> URL type : `https://images.pexels.com/photos/<ID>/pexels-photo-<ID>.jpeg`
+> Le hero de l'accueil et les cartes produits utilisent des **illustrations vectorielles sur-mesure** (couleurs Lunéa), 100 % libres de droit.
+
+---
+
+## Quiz « Trouver mon matelas » (capture de leads)
+
+Formulaire interactif en 3 questions relié à **Brevo** (contact + email de recommandation).
+- Front : `quiz.html` + `js/quiz.js`
+- Backend sécurisé : `functions/api/quiz.js` (Cloudflare Pages Function, clé API côté serveur)
+- Le bouton « Trouver mon matelas » de l'accueil pointe vers `quiz.html`.
+
+**Configuration complète (clé API, liste, expéditeur, variables Cloudflare) : voir `SETUP_BREVO.md`.**

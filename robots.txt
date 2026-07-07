@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.nuit-sereine.fr/sitemap.xml
+Sitemap: https://www.lunea-literie.fr/sitemap.xml

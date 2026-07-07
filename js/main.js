@@ -1,4 +1,4 @@
-/* Nuit Sereine — interactions légères, sans dépendance */
+/* Lunéa Literie — interactions légères, sans dépendance */
 (function () {
   "use strict";
 

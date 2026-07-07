@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trouver mon matelas en 3 questions | Lunéa Literie</title>
+<meta name="description" content="Répondez à 3 questions sur votre sommeil et recevez gratuitement la recommandation matelas la plus adaptée à votre profil, par email.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.lunea-literie.fr/quiz.html">
+<meta property="og:title" content="Trouver mon matelas en 3 questions | Lunéa Literie">
+<meta property="og:description" content="Votre recommandation literie personnalisée, en 30 secondes.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="disclosure-bar">
+  Transparence : certains liens de ce site sont des liens affiliés. <a href="a-propos.html">En savoir plus</a>
+</div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand"><img src="assets/logo-lunea.svg" alt="Lunéa Literie" class="brand-logo"></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="matelas.html">Matelas</a></li>
+      <li><a href="oreillers.html">Oreillers</a></li>
+      <li><a href="sommiers.html">Sommiers</a></li>
+      <li><a href="articles/meilleurs-matelas-2026.html">Guides</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="article-head">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> › Trouver mon matelas</div>
+    <p class="eyebrow">Recommandation personnalisée</p>
+    <h1>Trouvez votre matelas idéal en 3 questions</h1>
+    <p class="lead">Répondez à 3 questions rapides sur votre sommeil. On vous envoie gratuitement, par email, la recommandation la plus adaptée à votre profil, et vous la voyez tout de suite à l'écran.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container container--narrow">
+    <div class="quiz-wrap" id="quiz">
+
+      <!-- Progression -->
+      <div class="quiz-progress" aria-hidden="true"><span id="qbar" style="width:33%"></span></div>
+      <p class="quiz-count" id="qcount">Question 1 sur 3</p>
+
+      <!-- Étape 1 -->
+      <div class="quiz-step is-active" data-step="1">
+        <h2 class="quiz-q">Dans quelle position dormez-vous le plus souvent ?</h2>
+        <div class="opt-grid" data-key="position">
+          <button type="button" class="opt" data-val="dos"><b>Sur le dos</b><span>À plat, regard au plafond</span></button>
+          <button type="button" class="opt" data-val="cote"><b>Sur le côté</b><span>En chien de fusil</span></button>
+          <button type="button" class="opt" data-val="ventre"><b>Sur le ventre</b><span>Face au matelas</span></button>
+          <button type="button" class="opt" data-val="mixte"><b>Ça change</b><span>Je bouge la nuit</span></button>
+        </div>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="quiz-step" data-step="2">
+        <h2 class="quiz-q">Quel accueil recherchez-vous ?</h2>
+        <div class="opt-grid" data-key="ressenti">
+          <button type="button" class="opt" data-val="ferme"><b>Ferme</b><span>Soutien tonique, bien maintenu</span></button>
+          <button type="button" class="opt" data-val="equilibre"><b>Équilibré</b><span>Ni trop dur ni trop mou</span></button>
+          <button type="button" class="opt" data-val="moelleux"><b>Moelleux</b><span>Accueil enveloppant, cosy</span></button>
+        </div>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="quiz-step" data-step="3">
+        <h2 class="quiz-q">Quelle est votre priorité n°1 ?</h2>
+        <div class="opt-grid" data-key="priorite">
+          <button type="button" class="opt" data-val="dos"><b>Soulager mon dos</b><span>Douleurs lombaires, cervicales</span></button>
+          <button type="button" class="opt" data-val="chaleur"><b>Ne pas avoir chaud</b><span>Bonne régulation thermique</span></button>
+          <button type="button" class="opt" data-val="budget"><b>Maîtriser le budget</b><span>Le meilleur rapport qualité-prix</span></button>
+        </div>
+      </div>
+
+      <!-- Étape 4 : formulaire -->
+      <div class="quiz-step" data-step="4">
+        <h2 class="quiz-q">Où envoyer votre recommandation ?</h2>
+        <p class="quiz-help">Votre profil est prêt. Indiquez votre prénom et votre email : on vous envoie la sélection idéale (et vous la voyez juste en dessous).</p>
+        <form id="leadForm" class="lead-form" novalidate>
+          <div class="field">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" autocomplete="given-name" required maxlength="40" placeholder="Votre prénom">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required maxlength="120" placeholder="vous@exemple.fr">
+          </div>
+          <!-- anti-spam (ne pas remplir) -->
+          <input type="text" id="website" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span>J'accepte de recevoir ma recommandation et des conseils literie par email. Je peux me désinscrire à tout moment. Voir la <a href="politique-confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>.</span>
+          </label>
+          <p class="form-error" id="formError" hidden></p>
+          <button type="submit" class="btn btn--gold btn--block" id="submitBtn">Recevoir ma recommandation</button>
+        </form>
+      </div>
+
+      <!-- Résultat -->
+      <div class="quiz-step" data-step="result">
+        <div class="quiz-result" id="quizResult" aria-live="polite"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><img src="assets/logo-lunea-nuit.svg" alt="Lunéa Literie" class="brand-logo brand-logo--footer"></div>
+        <p class="footer-about">Le comparateur literie qui met la qualité de votre sommeil avant les commissions. Indépendant, transparent, à jour.</p>
+      </div>
+      <div><h4>Catégories</h4><a href="matelas.html">Matelas</a><a href="oreillers.html">Oreillers</a><a href="sommiers.html">Sommiers</a></div>
+      <div><h4>Guides</h4><a href="articles/meilleurs-matelas-2026.html">Meilleurs matelas 2026</a><a href="articles/matelas-mal-de-dos.html">Matelas et mal de dos</a></div>
+      <div><h4>Le site</h4><a href="a-propos.html">À propos</a><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Lunéa Literie. Tous droits réservés.</span>
+      <span>Comparateur indépendant. Liens affiliés signalés.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>

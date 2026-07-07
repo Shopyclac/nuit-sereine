@@ -4,3 +4,6 @@ Thumbs.db
 *.log
 .env
 .netlify/
+
+# Secrets locaux Cloudflare
+.dev.vars
