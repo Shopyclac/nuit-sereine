@@ -3,5 +3,9 @@
   "compatibility_date": "2026-07-07",
   "assets": {
     "directory": "."
-  }
+  },
+  "routes": [
+    { "pattern": "www.lunea-literie.fr", "custom_domain": true },
+    { "pattern": "lunea-literie.fr", "custom_domain": true }
+  ]
 }
