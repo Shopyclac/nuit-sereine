@@ -7,3 +7,4 @@ Thumbs.db
 
 # Secrets locaux Cloudflare
 .dev.vars
+.wrangler/
