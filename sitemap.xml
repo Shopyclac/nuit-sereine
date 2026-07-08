@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.lunea-literie.fr/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.lunea-literie.fr/matelas.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.lunea-literie.fr/oreillers.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.lunea-literie.fr/sommiers.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.lunea-literie.fr/articles/meilleurs-matelas-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.lunea-literie.fr/articles/matelas-mal-de-dos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.lunea-literie.fr/a-propos.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.lunea-literie.fr/mentions-legales.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
-  <url><loc>https://www.lunea-literie.fr/politique-confidentialite.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
-  <url><loc>https://www.lunea-literie.fr/quiz.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.lunea-literie.fr/matelas</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.lunea-literie.fr/oreillers</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.lunea-literie.fr/sommiers</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.lunea-literie.fr/articles/meilleurs-matelas-2026</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.lunea-literie.fr/articles/matelas-mal-de-dos</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.lunea-literie.fr/quiz</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.lunea-literie.fr/a-propos</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.lunea-literie.fr/charte-editoriale</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
 </urlset>
