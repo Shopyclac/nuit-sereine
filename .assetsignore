@@ -1,0 +1,5 @@
+.git
+.git/**
+*.md
+.gitignore
+wrangler.jsonc
