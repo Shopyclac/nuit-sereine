@@ -12,7 +12,9 @@
 const AFFILIATE_LINKS = {
   // Matelas : destinations = sites officiels des marques (prix réel visible en direct).
   // À remplacer par les liens affiliés une fois les programmes marques rejoints.
-  emma: "https://www.emma.fr/matelas/",
+  // Emma via Awin (awinmid 19336, awinaffid 2978923) : deep-link vers la fiche produit exacte
+  "emma-original-pro": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Fmatelas%2Fmatelas-emma-original-pro%2F",
+  "emma-original": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Fmatelas%2Fmatelas-emma-original%2F",
   tediber: "https://www.tediber.com/",
   hypnia: "https://www.hypnia.fr/",
   kipli: "https://kipli.com/fr/product-category/matelas/",
@@ -20,12 +22,12 @@ const AFFILIATE_LINKS = {
   // Oreillers
   wopilo: "https://wopilo.com/products/wopilo-plus",
   "tediber-oreiller": "https://www.tediber.com/products/oreiller",
-  "emma-oreiller": "https://www.emma.fr/",
+  "emma-oreiller": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Foreillers%2Foreiller-emma-original-adapt-elite%2F",
 
   // Sommiers
   "tediber-sommier": "https://www.tediber.com/collections/sommier",
   "tediber-tapissier": "https://www.tediber.com/products/sommier",
-  "emma-sommier": "https://www.emma.fr/",
+  "emma-sommier": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Fsommier%2F",
 
   // Amazon Partenaires (tag lunealit-21) : pour les produits réellement vendus sur Amazon.
   amazon: "https://www.amazon.fr?&linkCode=ll2&tag=lunealit-21&linkId=c775bbf627eab067b84c13f5b2ee81c9&ref_=as_li_ss_tl",
