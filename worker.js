@@ -17,6 +17,16 @@ const AFFILIATE_LINKS = {
   hypnia: "https://www.hypnia.fr/",
   kipli: "https://kipli.com/fr/product-category/matelas/",
 
+  // Oreillers
+  wopilo: "https://wopilo.com/products/wopilo-plus",
+  "tediber-oreiller": "https://www.tediber.com/products/oreiller",
+  "emma-oreiller": "https://www.emma.fr/",
+
+  // Sommiers
+  "tediber-sommier": "https://www.tediber.com/collections/sommier",
+  "tediber-tapissier": "https://www.tediber.com/products/sommier",
+  "emma-sommier": "https://www.emma.fr/",
+
   // Amazon Partenaires (tag lunealit-21) : pour les produits réellement vendus sur Amazon.
   amazon: "https://www.amazon.fr?&linkCode=ll2&tag=lunealit-21&linkId=c775bbf627eab067b84c13f5b2ee81c9&ref_=as_li_ss_tl",
 };
