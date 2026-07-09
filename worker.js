@@ -36,6 +36,28 @@ const AFFILIATE_LINKS = {
   "amazon-alese": "https://www.amazon.fr/s?k=alese+impermeable+matelas&tag=lunealit-21",
   "amazon-couette": "https://www.amazon.fr/s?k=couette+4+saisons&tag=lunealit-21",
   "amazon-oreiller": "https://www.amazon.fr/s?k=oreiller+memoire+de+forme&tag=lunealit-21",
+
+  // --- Accessoires : produits Amazon ciblés par marque + modèle (recherches taguées, remplaçables par liens SiteStripe exacts) ---
+  // Surmatelas
+  "sm-bedstory": "https://www.amazon.fr/s?k=BedStory+surmatelas+memoire+de+forme&tag=lunealit-21",
+  "sm-novilla": "https://www.amazon.fr/s?k=Novilla+surmatelas+memoire+de+forme&tag=lunealit-21",
+  "sm-dailydream": "https://www.amazon.fr/s?k=Dailydream+surmatelas&tag=lunealit-21",
+  // Protège-matelas
+  "pm-utopia": "https://www.amazon.fr/s?k=Utopia+Bedding+protege+matelas+impermeable&tag=lunealit-21",
+  "pm-dodo": "https://www.amazon.fr/s?k=Dodo+protege+matelas+impermeable+tencel&tag=lunealit-21",
+  "pm-blumtal": "https://www.amazon.fr/s?k=Blumtal+protege+matelas+impermeable&tag=lunealit-21",
+  // Alèse imperméable
+  "al-dodo": "https://www.amazon.fr/s?k=Dodo+alese+impermeable&tag=lunealit-21",
+  "al-utopia": "https://www.amazon.fr/s?k=Utopia+Bedding+alese+impermeable&tag=lunealit-21",
+  "al-bambou": "https://www.amazon.fr/s?k=alese+bambou+impermeable&tag=lunealit-21",
+  // Couette
+  "co-dodo": "https://www.amazon.fr/s?k=Dodo+couette+4+saisons&tag=lunealit-21",
+  "co-abeil": "https://www.amazon.fr/s?k=Abeil+couette+4+saisons&tag=lunealit-21",
+  "co-amazonbasics": "https://www.amazon.fr/s?k=Amazon+Basics+couette&tag=lunealit-21",
+  // Oreiller mémoire de forme
+  "or-zenpur": "https://www.amazon.fr/s?k=ZenPur+oreiller+memoire+de+forme&tag=lunealit-21",
+  "or-newentor": "https://www.amazon.fr/s?k=Newentor+oreiller+ergonomique+memoire+de+forme&tag=lunealit-21",
+  "or-recci": "https://www.amazon.fr/s?k=Recci+oreiller+memoire+de+forme&tag=lunealit-21",
 };
 
 export default {
