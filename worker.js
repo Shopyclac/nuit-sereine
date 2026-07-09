@@ -29,6 +29,13 @@ const AFFILIATE_LINKS = {
 
   // Amazon Partenaires (tag lunealit-21) : pour les produits réellement vendus sur Amazon.
   amazon: "https://www.amazon.fr?&linkCode=ll2&tag=lunealit-21&linkId=c775bbf627eab067b84c13f5b2ee81c9&ref_=as_li_ss_tl",
+
+  // Accessoires literie : recherches Amazon ciblées avec le tag (créditent la commission).
+  "amazon-surmatelas": "https://www.amazon.fr/s?k=surmatelas+memoire+de+forme&tag=lunealit-21",
+  "amazon-protege-matelas": "https://www.amazon.fr/s?k=protege+matelas+impermeable+respirant&tag=lunealit-21",
+  "amazon-alese": "https://www.amazon.fr/s?k=alese+impermeable+matelas&tag=lunealit-21",
+  "amazon-couette": "https://www.amazon.fr/s?k=couette+4+saisons&tag=lunealit-21",
+  "amazon-oreiller": "https://www.amazon.fr/s?k=oreiller+memoire+de+forme&tag=lunealit-21",
 };
 
 export default {
