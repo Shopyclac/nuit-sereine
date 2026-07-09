@@ -60,6 +60,12 @@ const AFFILIATE_LINKS = {
   "or-zenpur": "https://www.amazon.fr/s?k=ZenPur+oreiller+memoire+de+forme&tag=lunealit-21",
   "or-newentor": "https://www.amazon.fr/s?k=Newentor+oreiller+ergonomique+memoire+de+forme&tag=lunealit-21",
   "or-recci": "https://www.amazon.fr/s?k=Recci+oreiller+memoire+de+forme&tag=lunealit-21",
+
+  // Matelas pas cher : Emma Lite via Awin (deep-link fiche), matelas budget via Amazon tagué
+  "emma-lite": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Fmatelas%2Fmatelas-emma-original-lite%2F",
+  "amazon-zinus": "https://www.amazon.fr/s?k=Zinus+Green+Tea+matelas&tag=lunealit-21",
+  "amazon-marckonfort": "https://www.amazon.fr/s?k=Marckonfort+Ergo+Therapy+matelas&tag=lunealit-21",
+  "amazon-naturalex": "https://www.amazon.fr/s?k=Naturalex+PerfectSleep+matelas&tag=lunealit-21",
 };
 
 export default {
