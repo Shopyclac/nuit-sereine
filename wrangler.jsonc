@@ -1,8 +1,11 @@
 {
   "name": "projet-literie",
   "compatibility_date": "2026-07-07",
+  "main": "worker.js",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": true
   },
   "routes": [
     { "pattern": "www.lunea-literie.fr", "custom_domain": true },

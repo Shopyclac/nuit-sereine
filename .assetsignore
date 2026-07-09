@@ -5,3 +5,4 @@
 *.md
 .gitignore
 wrangler.jsonc
+worker.js
