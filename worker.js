@@ -15,8 +15,9 @@ const AFFILIATE_LINKS = {
   // Emma via Awin (awinmid 19336, awinaffid 2978923) : deep-link vers la fiche produit exacte
   "emma-original-pro": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Fmatelas%2Fmatelas-emma-original-pro%2F",
   "emma-original": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Fmatelas%2Fmatelas-emma-original%2F",
-  tediber: "https://www.tediber.com/",
-  hypnia: "https://www.hypnia.fr/",
+  // Deep-links fiches produits exactes (règle projet : jamais une page d'accueil).
+  tediber: "https://www.tediber.com/products/matelas",
+  hypnia: "https://www.hypnia.fr/matelas-bien-etre-supreme.html",
   kipli: "https://kipli.com/fr/product-category/matelas/",
   // Deep-links fiches produits exactes (dormeur sur le côté). À convertir en liens Awin/programme dès adhésion.
   "hypnia-confort-premium": "https://www.hypnia.fr/products/matelas-confort-premium",
