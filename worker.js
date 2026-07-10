@@ -75,12 +75,12 @@ const AFFILIATE_LINKS = {
 // Quiz « Trouver mon matelas » : mapping reco -> produit + page du site à mettre en avant.
 // Les clés (emma / tediber / hypnia) correspondent à la sortie de js/quiz.js.
 const QUIZ_PRODUCTS = {
-  emma: { name: "Emma Hybride", price: "dès 549 €", url: "/matelas",
-    why: "Le plus polyvalent : il convient à presque toutes les positions et régule très bien la chaleur." },
-  tediber: { name: "Tediber L'Incroyable", price: "dès 590 €", url: "/matelas-dormeur-sur-le-cote",
-    why: "Accueil moelleux et enveloppant : idéal pour le sommeil sur le côté et un couchage cosy." },
-  hypnia: { name: "Hypnia Bien-être Suprême", price: "dès 399 €", url: "/matelas-pas-cher",
-    why: "Soutien ferme au meilleur prix : parfait pour un dos bien maintenu sans exploser le budget." },
+  emma: { name: "Emma Original Pro", budget: "€€", slug: "emma-original-pro", page: "/matelas",
+    why: "Le plus polyvalent de notre sélection : il convient à presque toutes les positions et régule bien la chaleur grâce à ses ressorts. La valeur sûre quand on hésite." },
+  tediber: { name: "Tediber L'Incroyable", budget: "€€€", slug: "tediber", page: "/matelas-dormeur-sur-le-cote",
+    why: "Un accueil moelleux et enveloppant qui soulage les points de pression : idéal si vous dormez sur le côté ou aimez un couchage cosy, avec un prix clair toute l'année." },
+  hypnia: { name: "Hypnia Bien-être Suprême", budget: "€€", slug: "hypnia", page: "/matelas-pas-cher",
+    why: "Un soutien ferme et un très bon rapport qualité-prix : le bon choix pour un dos bien maintenu sans faire exploser le budget." },
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -176,18 +176,25 @@ async function handleQuiz(request, env) {
   } catch (_) { /* on continue : l'email reste prioritaire */ }
 
   // 2) Envoyer la recommandation par email (transactionnel)
+  const goUrl = `${siteUrl}/go/${product.slug}`;   // lien d'affiliation (redirection /go/)
+  const pageUrl = `${siteUrl}${product.page}`;     // page comparatif du site (contexte)
   const html = `
     <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:auto;color:#14233F">
       <p style="font-size:12px;letter-spacing:2px;color:#C7A25C;text-transform:uppercase;margin:0 0 6px">Lunéa Literie</p>
       <h1 style="font-size:22px;margin:0 0 12px">Votre recommandation, ${escapeHtml(prenom)}</h1>
-      <p style="font-size:15px;line-height:1.6">D'après vos réponses, le matelas le plus adapté à votre profil est :</p>
+      <p style="font-size:15px;line-height:1.6">D'après vos réponses, voici le matelas qui correspond le mieux à votre profil :</p>
       <div style="border:1px solid #E6DFD2;border-radius:12px;padding:20px;background:#FBF8F2;margin:16px 0">
-        <h2 style="margin:0 0 6px;font-size:20px">${escapeHtml(product.name)}</h2>
-        <p style="margin:0 0 12px;color:#6b7280;font-size:14px">${escapeHtml(product.price)}</p>
-        <p style="margin:0 0 16px;font-size:15px;line-height:1.6">${escapeHtml(product.why)}</p>
-        <a href="${siteUrl}${product.url}" style="display:inline-block;background:#C7A25C;color:#14233F;font-weight:bold;text-decoration:none;padding:12px 22px;border-radius:8px">Voir ce matelas</a>
+        <h2 style="margin:0 0 4px;font-size:20px">${escapeHtml(product.name)}</h2>
+        <p style="margin:0 0 12px;color:#6b7280;font-size:13px">Budget indicatif : ${escapeHtml(product.budget)}</p>
+        <p style="margin:0 0 18px;font-size:15px;line-height:1.6">${escapeHtml(product.why)}</p>
+        <a href="${goUrl}" style="display:inline-block;background:#C7A25C;color:#14233F;font-weight:bold;text-decoration:none;padding:12px 22px;border-radius:8px">Découvrir ce matelas &rarr;</a>
+        <p style="margin:12px 0 0;font-size:12px;color:#6b7280">Le prix réel s'affiche en direct chez le marchand. Vous pouvez aussi <a href="${pageUrl}" style="color:#8f6a2f">comparer avec les autres modèles</a>.</p>
       </div>
-      <p style="font-size:13px;color:#6b7280;line-height:1.6">Vous recevez cet email car vous avez rempli le test « Trouver mon matelas » sur ${siteUrl}. Vous pouvez vous désinscrire à tout moment.</p>
+      <div style="border-left:3px solid #C7A25C;padding:6px 0 6px 16px;margin:22px 0">
+        <p style="margin:0;font-size:14px;line-height:1.7;font-style:italic">Un mot de la rédaction : on ne prétend pas tester chaque matelas en laboratoire. On compare les caractéristiques réelles et on croise des milliers d'avis d'acheteurs, pour vous conseiller ce qu'on suggérerait à un proche avec votre profil. Et surtout, profitez de la période d'essai : c'est votre vraie garantie.</p>
+        <p style="margin:10px 0 0;font-size:13px;color:#6b7280">Bien à vous, l'équipe Lunéa Literie</p>
+      </div>
+      <p style="font-size:12px;color:#9ca3af;line-height:1.6">Transparence : le bouton ci-dessus est un lien affilié. Si vous achetez via ce lien, nous touchons une commission sans aucun surcoût pour vous, et cela n'influence pas nos recommandations. Vous recevez cet email car vous avez rempli le test « Trouver mon matelas » sur ${siteUrl} ; vous pouvez vous désinscrire à tout moment.</p>
     </div>`;
 
   try {

@@ -6,29 +6,29 @@
 
   var PRODUCTS = {
     emma: {
-      name: "Emma Hybride",
+      name: "Emma Original Pro",
       type: "Matelas hybride mousse + ressorts ensachés",
-      price: "dès 549 €",
+      price: "Budget €€",
       accent: "#C7A25C",
-      url: "matelas.html",
+      url: "/go/emma-original-pro",
       why: "Le plus polyvalent de notre sélection : il convient à presque toutes les positions et régule très bien la chaleur grâce à ses ressorts ensachés.",
       feats: ["Soutien équilibré toutes positions", "Excellente régulation thermique", "100 nuits d'essai"]
     },
     tediber: {
       name: "Tediber L'Incroyable",
       type: "Matelas mousse 3 couches, fabriqué en Europe",
-      price: "dès 590 €",
+      price: "Budget €€€",
       accent: "#2E4A73",
-      url: "matelas.html",
+      url: "/go/tediber",
       why: "Son accueil moelleux et enveloppant soulage les points de pression : idéal si vous dormez sur le côté ou aimez un couchage cosy.",
       feats: ["Accueil moelleux enveloppant", "Parfait pour le sommeil sur le côté", "Prix unique, 100 nuits d'essai"]
     },
     hypnia: {
       name: "Hypnia Bien-être Suprême",
       type: "Matelas ferme, très bon rapport qualité-prix",
-      price: "dès 399 €",
+      price: "Budget €€",
       accent: "#4f9d77",
-      url: "matelas.html",
+      url: "/go/hypnia",
       why: "Un soutien ferme et tonique au meilleur prix : le bon choix pour un dos bien maintenu sans exploser le budget.",
       feats: ["Soutien ferme, dos bien maintenu", "Meilleur rapport qualité-prix", "Essai longue durée"]
     }
@@ -130,7 +130,7 @@
           '<ul class="pc-feat result-feat">' + feats + '</ul>' +
           '<div class="result-foot">' +
             '<div class="pc-price">' + esc(p.price) + '</div>' +
-            '<a href="' + p.url + '" rel="sponsored nofollow" class="btn btn--gold">Voir ce matelas</a>' +
+            '<a href="' + p.url + '" target="_blank" rel="sponsored nofollow noopener" class="btn btn--gold">Voir ce matelas</a>' +
           '</div>' +
         '</div>' +
       '</div>' +
