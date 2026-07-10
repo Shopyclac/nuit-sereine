@@ -18,6 +18,9 @@ const AFFILIATE_LINKS = {
   tediber: "https://www.tediber.com/",
   hypnia: "https://www.hypnia.fr/",
   kipli: "https://kipli.com/fr/product-category/matelas/",
+  // Deep-links fiches produits exactes (dormeur sur le côté). À convertir en liens Awin/programme dès adhésion.
+  "hypnia-confort-premium": "https://www.hypnia.fr/products/matelas-confort-premium",
+  "tediber-hybride-premium": "https://www.tediber.com/products/matelas-hybride-premium",
 
   // Oreillers
   wopilo: "https://wopilo.com/products/wopilo-plus",
