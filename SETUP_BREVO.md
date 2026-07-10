@@ -1,12 +1,16 @@
 # Configuration du quiz « Trouver mon matelas » + Brevo
 
-Le quiz est composé de 3 fichiers :
+Le quiz est composé de :
 - `quiz.html` — la page (3 questions + formulaire prénom/email + résultat instantané)
 - `js/quiz.js` — la logique (calcul de la reco + envoi au serveur)
-- `functions/api/quiz.js` — **la fonction serverless** qui parle à Brevo (clé API côté serveur)
+- **`worker.js` → route `POST /api/quiz`** — le code serveur qui parle à Brevo (clé API côté serveur)
+
+> **Architecture** : ce site est déployé comme **Worker Cloudflare** (`wrangler deploy`), pas comme Pages.
+> La logique Brevo vit donc dans `worker.js` (fonction `handleQuiz`). L'ancien `functions/api/quiz.js`
+> (convention Pages, jamais exécutée par un Worker) a été supprimé pour éviter toute confusion.
 
 Le navigateur ne voit **jamais** la clé API : elle est stockée uniquement dans les variables
-d'environnement Cloudflare. C'est ce qui rend l'ensemble sécurisé.
+d'environnement du Worker. C'est ce qui rend l'ensemble sécurisé.
 
 ---
 
@@ -22,10 +26,10 @@ Dans ton compte Brevo :
 
 ---
 
-## 2. Déclarer les variables dans Cloudflare Pages
+## 2. Déclarer les variables dans le Worker Cloudflare
 
-Dans le dashboard Cloudflare → **Workers & Pages → ton projet → Settings → Environment variables**,
-ajoute (pour *Production* et *Preview*) :
+Dans le dashboard Cloudflare → **Workers & Pages → `projet-literie` → Settings → Variables and Secrets**,
+ajoute :
 
 | Variable | Type | Exemple |
 |---|---|---|
