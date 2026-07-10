@@ -24,7 +24,6 @@ const AFFILIATE_LINKS = {
   "tediber-hybride-premium": "https://www.tediber.com/products/matelas-hybride-premium",
 
   // Oreillers
-  wopilo: "https://wopilo.com/products/wopilo-plus",
   "tediber-oreiller": "https://www.tediber.com/products/oreiller",
   "emma-oreiller": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Foreillers%2Foreiller-emma-original-adapt-elite%2F",
 
