@@ -10,5 +10,11 @@
   "routes": [
     { "pattern": "www.lunea-literie.fr", "custom_domain": true },
     { "pattern": "lunea-literie.fr", "custom_domain": true }
-  ]
+  ],
+  "vars": {
+    "BREVO_LIST_ID": "27",
+    "BREVO_SENDER_EMAIL": "contact@lunea-literie.fr",
+    "BREVO_SENDER_NAME": "Lunéa Literie",
+    "SITE_URL": "https://www.lunea-literie.fr"
+  }
 }
