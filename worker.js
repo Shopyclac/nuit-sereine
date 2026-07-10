@@ -194,7 +194,7 @@ async function handleQuiz(request, env) {
         <p style="margin:0;font-size:14px;line-height:1.7;font-style:italic">Un mot de la rédaction : on ne prétend pas tester chaque matelas en laboratoire. On compare les caractéristiques réelles et on croise des milliers d'avis d'acheteurs, pour vous conseiller ce qu'on suggérerait à un proche avec votre profil. Et surtout, profitez de la période d'essai : c'est votre vraie garantie.</p>
         <p style="margin:10px 0 0;font-size:13px;color:#6b7280">Bien à vous, l'équipe Lunéa Literie</p>
       </div>
-      <p style="font-size:12px;color:#9ca3af;line-height:1.6">Transparence : le bouton ci-dessus est un lien affilié. Si vous achetez via ce lien, nous touchons une commission sans aucun surcoût pour vous, et cela n'influence pas nos recommandations. Vous recevez cet email car vous avez rempli le test « Trouver mon matelas » sur ${siteUrl} ; vous pouvez vous désinscrire à tout moment.</p>
+      <p style="font-size:12px;color:#9ca3af;line-height:1.6">Transparence : le bouton ci-dessus est un lien affilié. Si vous achetez via ce lien, nous touchons une commission sans aucun surcoût pour vous, et cela n'influence pas nos recommandations. Vous recevez cet email car vous avez rempli le test « Trouver mon matelas » sur ${siteUrl}. Pour ne plus recevoir nos emails, <a href="mailto:${env.BREVO_SENDER_EMAIL}" style="color:#9ca3af">désinscrivez-vous ici</a>.</p>
     </div>`;
 
   try {
@@ -206,6 +206,7 @@ async function handleQuiz(request, env) {
         to: [{ email: email, name: prenom }],
         subject: `${prenom}, votre matelas idéal : ${product.name}`,
         htmlContent: html,
+        headers: { "List-Unsubscribe": `<mailto:${env.BREVO_SENDER_EMAIL}>` },
       }),
     });
     if (!res.ok) return jsonResponse({ ok: false, error: "email_failed" }, 502);
