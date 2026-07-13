@@ -16,5 +16,8 @@
     "BREVO_SENDER_EMAIL": "contact@lunea-literie.fr",
     "BREVO_SENDER_NAME": "Lunéa Literie",
     "SITE_URL": "https://www.lunea-literie.fr"
-  }
+  },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "lunea-analytics", "database_id": "f32f96f5-5164-46cd-aac2-67dcbbb5ef36" }
+  ]
 }

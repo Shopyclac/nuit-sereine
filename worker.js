@@ -85,7 +85,7 @@ const QUIZ_PRODUCTS = {
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     // 1. Redirection permanente apex -> www (préserve chemin et query string)
@@ -105,7 +105,13 @@ export default {
       const slug = url.pathname.slice(4).replace(/\/+$/, "").toLowerCase();
       const target = AFFILIATE_LINKS[slug];
       if (target) {
-        return Response.redirect(target, 302);
+        ctx.waitUntil(recordClick(env, slug, request)); // comptage asynchrone, ne bloque pas la redirection
+        // no-store : empêche la mise en cache edge du 302, sinon les clics répétés
+        // ne repasseraient pas par le Worker et ne seraient pas comptés.
+        return new Response(null, {
+          status: 302,
+          headers: { "Location": target, "Cache-Control": "no-store, no-cache, must-revalidate" },
+        });
       }
       return new Response("Lien introuvable.", { status: 404 });
     }
@@ -114,6 +120,17 @@ export default {
     return env.ASSETS.fetch(request);
   },
 };
+
+// Enregistre un clic /go/ dans D1 (comptage affiliation, cookieless).
+// Ne doit jamais faire échouer la redirection : toute erreur est avalée.
+async function recordClick(env, slug, request) {
+  if (!env.DB) return;
+  try {
+    const ref = (request.headers.get("Referer") || "").slice(0, 300) || null;
+    await env.DB.prepare("INSERT INTO clicks (slug, ts, ref) VALUES (?, ?, ?)")
+      .bind(slug, Date.now(), ref).run();
+  } catch (e) { /* silencieux */ }
+}
 
 function jsonResponse(data, status) {
   return new Response(JSON.stringify(data), {
