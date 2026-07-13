@@ -476,3 +476,20 @@ p  { margin: 0 0 1.1em; }
   .result-illus { height: auto; }
   .result-body { padding: 0 22px 22px; }
 }
+
+/* Bandeau de consentement cookies */
+#cookie-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
+  background: #14233F; color: #fff; box-shadow: 0 -4px 22px rgba(0,0,0,.2); }
+#cookie-banner .cookie-inner { max-width: 1100px; margin: 0 auto; padding: 15px 20px;
+  display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+#cookie-banner .cookie-text { margin: 0; font-size: .88rem; line-height: 1.5; flex: 1 1 300px; }
+#cookie-banner .cookie-text a { color: #C4A06B; text-decoration: underline; }
+#cookie-banner .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+#cookie-banner .cookie-btn { cursor: pointer; border-radius: 8px; padding: 10px 22px;
+  font-size: .88rem; font-weight: 700; border: 1px solid transparent; font-family: inherit; }
+#cookie-banner .cookie-btn--accept { background: #C7A25C; color: #14233F; }
+#cookie-banner .cookie-btn--refuse { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+@media (max-width: 640px) {
+  #cookie-banner .cookie-actions { width: 100%; }
+  #cookie-banner .cookie-btn { flex: 1; }
+}

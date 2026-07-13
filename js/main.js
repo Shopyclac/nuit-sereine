@@ -57,3 +57,64 @@
     });
   });
 })();
+
+/* ---- Consentement cookies + Google Analytics (GA4) ---- */
+/* GA n'est chargé qu'APRÈS acceptation (conforme CNIL : aucun dépôt de cookie avant consentement). */
+(function () {
+  "use strict";
+  var GA_ID = "G-Y8SDP65EVG";
+  var KEY = "lunea_consent"; // "granted" | "denied"
+
+  function loadGA() {
+    if (window.__luneaGA) return;
+    window.__luneaGA = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+  }
+
+  function save(v) {
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+    if (v === "granted") loadGA();
+  }
+
+  function closeBanner() {
+    var b = document.getElementById("cookie-banner");
+    if (b && b.parentNode) b.parentNode.removeChild(b);
+  }
+
+  function openBanner() {
+    if (document.getElementById("cookie-banner")) return;
+    var bar = document.createElement("div");
+    bar.id = "cookie-banner";
+    bar.setAttribute("role", "dialog");
+    bar.setAttribute("aria-label", "Consentement aux cookies");
+    bar.innerHTML =
+      '<div class="cookie-inner">' +
+        '<p class="cookie-text">Nous utilisons des cookies de mesure d\'audience (Google Analytics) pour améliorer le site. Vous pouvez les accepter ou les refuser. <a href="/politique-confidentialite">En savoir plus</a>.</p>' +
+        '<div class="cookie-actions">' +
+          '<button type="button" class="cookie-btn cookie-btn--refuse" id="cookie-refuse">Refuser</button>' +
+          '<button type="button" class="cookie-btn cookie-btn--accept" id="cookie-accept">Accepter</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(bar);
+    document.getElementById("cookie-accept").addEventListener("click", function () { save("granted"); closeBanner(); });
+    document.getElementById("cookie-refuse").addEventListener("click", function () { save("denied"); closeBanner(); });
+  }
+
+  // Rouvre le choix (bouton dans la politique de confidentialité).
+  window.luneaOpenCookieSettings = function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    openBanner();
+  };
+
+  var choice = null;
+  try { choice = localStorage.getItem(KEY); } catch (e) {}
+  if (choice === "granted") loadGA();
+  else if (choice !== "denied") openBanner();
+})();
