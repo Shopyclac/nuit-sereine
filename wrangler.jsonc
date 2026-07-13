@@ -2,6 +2,7 @@
   "name": "projet-literie",
   "compatibility_date": "2026-07-07",
   "main": "worker.js",
+  "workers_dev": false,
   "assets": {
     "directory": ".",
     "binding": "ASSETS",

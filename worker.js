@@ -88,10 +88,22 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // 1. Redirection permanente apex -> www (préserve chemin et query string)
+    // 0. .well-known (security.txt…) servi directement, y compris sur l'apex,
+    //    pour que la découverte de sécurité aboutisse sans passer par une redirection.
+    if (url.pathname.startsWith("/.well-known/")) {
+      return env.ASSETS.fetch(request);
+    }
+
+    // 1. Redirection permanente apex -> www (avec HSTS sur la réponse elle-même)
     if (url.hostname === "lunea-literie.fr") {
       url.hostname = "www.lunea-literie.fr";
-      return Response.redirect(url.toString(), 301);
+      return new Response(null, {
+        status: 301,
+        headers: {
+          "Location": url.toString(),
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        },
+      });
     }
 
     // 2. Quiz -> Brevo (contact + email de recommandation). Clé API côté serveur uniquement.
