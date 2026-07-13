@@ -118,3 +118,13 @@
   if (choice === "granted") loadGA();
   else if (choice !== "denied") openBanner();
 })();
+
+/* ---- Cloudflare Web Analytics (cookieless, exempté de consentement) ---- */
+(function () {
+  "use strict";
+  var s = document.createElement("script");
+  s.defer = true;
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.setAttribute("data-cf-beacon", '{"token": "e25629fa41454c1fa9fe896458017716"}');
+  document.head.appendChild(s);
+})();
