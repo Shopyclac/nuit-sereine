@@ -16,11 +16,13 @@ const AFFILIATE_LINKS = {
   "emma-original-pro": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Fmatelas%2Fmatelas-emma-original-pro%2F",
   "emma-original": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Fmatelas%2Fmatelas-emma-original%2F",
   // Deep-links fiches produits exactes (règle projet : jamais une page d'accueil).
-  tediber: "https://www.tediber.com/products/matelas",
-  hypnia: "https://www.hypnia.fr/matelas-bien-etre-supreme.html",
+  // Tediber : le matelas mousse « L'Incroyable » a été retiré ; on pointe le matelas Hybride actuel (fabriqué en France).
+  tediber: "https://www.tediber.com/products/matelas-hybride",
+  // Hypnia est devenu Slome en 2026 : deep-links pointés en direct sur slome.fr (on ne dépend plus de la redirection hypnia.fr).
+  hypnia: "https://slome.fr/products/matelas-bienetre-supreme",
   kipli: "https://kipli.com/fr/product-category/matelas/",
   // Deep-links fiches produits exactes (dormeur sur le côté). À convertir en liens Awin/programme dès adhésion.
-  "hypnia-confort-premium": "https://www.hypnia.fr/products/matelas-confort-premium",
+  "hypnia-confort-premium": "https://slome.fr/products/matelas-premium",
   "tediber-hybride-premium": "https://www.tediber.com/products/matelas-hybride-premium",
 
   // Oreillers
@@ -76,9 +78,9 @@ const AFFILIATE_LINKS = {
 const QUIZ_PRODUCTS = {
   emma: { name: "Emma Original Pro", budget: "€€", slug: "emma-original-pro", page: "/matelas",
     why: "Le plus polyvalent de notre sélection : il convient à presque toutes les positions et régule bien la chaleur grâce à ses ressorts. La valeur sûre quand on hésite." },
-  tediber: { name: "Tediber L'Incroyable", budget: "€€€", slug: "tediber", page: "/matelas-dormeur-sur-le-cote",
-    why: "Un accueil moelleux et enveloppant qui soulage les points de pression : idéal si vous dormez sur le côté ou aimez un couchage cosy, avec un prix clair toute l'année." },
-  hypnia: { name: "Hypnia Bien-être Suprême", budget: "€€", slug: "hypnia", page: "/matelas-pas-cher",
+  tediber: { name: "Tediber Hybride", budget: "€€€", slug: "tediber", page: "/matelas-dormeur-sur-le-cote",
+    why: "Un accueil enveloppant posé sur un cœur de ressorts qui soulage les points de pression : idéal si vous dormez sur le côté ou aimez un couchage à la fois cosy et bien ventilé, fabriqué en France." },
+  hypnia: { name: "Slome Bien-être Suprême (ex-Hypnia)", budget: "€€", slug: "hypnia", page: "/matelas-pas-cher",
     why: "Un soutien ferme et un très bon rapport qualité-prix : le bon choix pour un dos bien maintenu sans faire exploser le budget." },
 };
 
