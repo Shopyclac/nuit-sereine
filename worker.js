@@ -20,7 +20,10 @@ const AFFILIATE_LINKS = {
   tediber: "https://www.tediber.com/products/matelas-hybride",
   // Hypnia est devenu Slome en 2026 : deep-links pointés en direct sur slome.fr (on ne dépend plus de la redirection hypnia.fr).
   hypnia: "https://slome.fr/products/matelas-bienetre-supreme",
-  kipli: "https://kipli.com/fr/product-category/matelas/",
+  kipli: "https://kipli.com/fr/product/kipli-le-matelas-100-latex-naturel",
+  // Matelas latex naturel : Dunlopillo (référence Talalay) et Naturalex Blue Latex (entrée de gamme) via Amazon tagué.
+  "amazon-dunlopillo": "https://www.amazon.fr/s?k=Dunlopillo+matelas+latex+naturel+7+zones&tag=lunealit-21",
+  "amazon-naturalex-latex": "https://www.amazon.fr/s?k=Naturalex+Blue+Latex+matelas&tag=lunealit-21",
   // Deep-links fiches produits exactes (dormeur sur le côté). À convertir en liens Awin/programme dès adhésion.
   "hypnia-confort-premium": "https://slome.fr/products/matelas-premium",
   "tediber-hybride-premium": "https://www.tediber.com/products/matelas-hybride-premium",
