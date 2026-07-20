@@ -68,6 +68,9 @@ const AFFILIATE_LINKS = {
   "or-zenpur": "https://www.amazon.fr/s?k=ZenPur+oreiller+memoire+de+forme&tag=lunealit-21",
   "or-newentor": "https://www.amazon.fr/s?k=Newentor+oreiller+ergonomique+memoire+de+forme&tag=lunealit-21",
   "or-recci": "https://www.amazon.fr/s?k=Recci+oreiller+memoire+de+forme&tag=lunealit-21",
+  // Oreillers cervicaux : formes de référence (papillon Elviros, vague Tempur) pour /oreiller-cervicales
+  "or-elviros": "https://www.amazon.fr/s?k=Elviros+oreiller+cervical+memoire+de+forme&tag=lunealit-21",
+  "or-tempur": "https://www.amazon.fr/s?k=Tempur+Original+oreiller+cervical&tag=lunealit-21",
 
   // Matelas pas cher : Emma Lite via Awin (deep-link fiche), matelas budget via Amazon tagué
   "emma-lite": "https://www.awin1.com/cread.php?awinmid=19336&awinaffid=2978923&clickref=lunealit&ued=https%3A%2F%2Fwww.emma.fr%2Fmatelas%2Fmatelas-emma-original-lite%2F",
