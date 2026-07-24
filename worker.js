@@ -68,6 +68,8 @@ const AFFILIATE_LINKS = {
   "or-zenpur": "https://www.amazon.fr/s?k=ZenPur+oreiller+memoire+de+forme&tag=lunealit-21",
   "or-newentor": "https://www.amazon.fr/s?k=Newentor+oreiller+ergonomique+memoire+de+forme&tag=lunealit-21",
   "or-recci": "https://www.amazon.fr/s?k=Recci+oreiller+memoire+de+forme&tag=lunealit-21",
+  // Flocons de mousse mémoire de forme + gel (structure aérée, hauteur réglable) pour /oreiller-memoire-de-forme
+  "or-linenspa": "https://www.amazon.fr/s?k=Linenspa+oreiller+flocons+memoire+de+forme+gel&tag=lunealit-21",
   // Oreillers cervicaux : formes de référence (papillon Elviros, vague Tempur) pour /oreiller-cervicales
   "or-elviros": "https://www.amazon.fr/s?k=Elviros+oreiller+cervical+memoire+de+forme&tag=lunealit-21",
   "or-tempur": "https://www.amazon.fr/s?k=Tempur+Original+oreiller+cervical&tag=lunealit-21",
